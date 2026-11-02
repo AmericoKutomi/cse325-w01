@@ -20,25 +20,25 @@ POST {{ContosoPizza_HostAddress}}/pizza/
 Content-Type: application/json
 
 {
-    "name": "Hawaii",
+    "name": "Margherita",
     "isGlutenFree": false
 }
 
 ###
-PUT {{ContosoPizza_HostAddress}}/pizza/3
+PUT {{ContosoPizza_HostAddress}}/pizza/5
 Content-Type: application/json
 
 {
-    "id": 3,
-    "name": "Hawaiian",
-    "isGlutenFree": false
+    "id": 5,
+    "name": "Margherita Free",
+    "isGlutenFree": true
 }
 
 ###
-GET {{ContosoPizza_HostAddress}}/pizza/3
+GET {{ContosoPizza_HostAddress}}/pizza/5
 Accept: application/json
 
 ###
-DELETE {{ContosoPizza_HostAddress}}/pizza/3
+DELETE {{ContosoPizza_HostAddress}}/pizza/5
 
 ###
