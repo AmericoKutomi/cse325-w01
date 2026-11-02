@@ -19,7 +19,7 @@ static PizzaService()
 
 ## 2. API Testing Evidence
 
-The following examples demonstrate the of the four CRUD operations.
+The following examples demonstrate the four CRUD operations on Pizzas list.
 
 ### 2.1 GET – Retrieve Pizzas
 
