@@ -1,6 +1,6 @@
 ## 1. Additional Pizza in the Seed Data
 
-The following code from `PizzaService.cs` shows the initial list of pizzas, including the additional pizza **Pepperoni** (Id = 4).
+The following code from `PizzaService.cs` shows the initial list of pizzas, including the additional pizza **Hawaiian** (Id = 3), and **Pepperoni** (Id = 4).
 
 ```csharp
 static int nextId = 5;
