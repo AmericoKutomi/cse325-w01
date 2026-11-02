@@ -1,0 +1,15 @@
+Sales Summary:
+----------------------------
+  Total Sales: R$ 171.517,08
+
+Sales Details:
+----------------------------
+D:\OneDrive\BYU\CSE 325\Tutorial\mslearn-dotnet-files\stores\sales.json: R$ 88,88
+D:\OneDrive\BYU\CSE 325\Tutorial\mslearn-dotnet-files\stores\201\sales.json: R$ 501,22
+D:\OneDrive\BYU\CSE 325\Tutorial\mslearn-dotnet-files\stores\201\salestotals.json: R$ 1.501,22
+D:\OneDrive\BYU\CSE 325\Tutorial\mslearn-dotnet-files\stores\202\sales.json: R$ 1.234,22
+D:\OneDrive\BYU\CSE 325\Tutorial\mslearn-dotnet-files\stores\202\salestotals.json: R$ 101,22
+D:\OneDrive\BYU\CSE 325\Tutorial\mslearn-dotnet-files\stores\203\sales.json: R$ 99,00
+D:\OneDrive\BYU\CSE 325\Tutorial\mslearn-dotnet-files\stores\203\salestotals.json: R$ 154.401,22
+D:\OneDrive\BYU\CSE 325\Tutorial\mslearn-dotnet-files\stores\204\sales.json: R$ 88,88
+D:\OneDrive\BYU\CSE 325\Tutorial\mslearn-dotnet-files\stores\204\salestotals.json: R$ 13.501,22
