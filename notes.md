@@ -181,3 +181,54 @@ HTTP/1.1 200 OK
 ```
 
 **Status Code:** `200`
+
+## 3. Sales Summary Function
+
+The following code from `Program.cs` implements the Sales Summary functionality. It reads the JSON files, extracts the sales amounts, calculates the grand total, and generates the `SalesSummary.txt` file on salesTotalDir folder.
+The program considers the attributes Total or OverallTotal in the files. The record SalesTotal considers both attributes.
+
+```csharp
+record SalesTotal(double? Total, double? OverallTotal);
+
+static void GenerateSalesSummary(IEnumerable<string> salesFiles)
+{
+    double totalSales = 0;
+
+    // StringBuilders for accumulating details
+    StringBuilder salesDetailsBuilder = new StringBuilder();
+    salesDetailsBuilder.AppendLine("Sales Details:");
+    salesDetailsBuilder.AppendLine("----------------------------");
+
+    // Loop over each file path in salesFiles
+    foreach (var file in salesFiles)
+    {
+        // Read the contents of the file
+        string salesJson = File.ReadAllText(file);
+
+        // Parse the contents as JSON
+        SalesTotal? data = JsonConvert.DeserializeObject<SalesTotal?>(salesJson);
+
+        // Add the amount found in the Total attribute or OverallTotal attribute to the totalSales variable
+        double fileTotal = data?.Total ?? data?.OverallTotal ?? 0;
+        totalSales += fileTotal;
+        salesDetailsBuilder.AppendLine($"{file}: {fileTotal:C}");
+    }
+
+    // Declare a StringBuilder for the General Summary
+    StringBuilder summaryBuilder = new StringBuilder();
+    summaryBuilder.AppendLine("Sales Summary:");
+    summaryBuilder.AppendLine("----------------------------");
+    summaryBuilder.AppendLine($"  Total Sales: {totalSales:C}");
+    summaryBuilder.AppendLine();
+
+    File.WriteAllText(
+        Path.Combine("salesTotalDir", "SalesSummary.txt"),
+        summaryBuilder.ToString());
+
+    File.AppendAllText(
+        Path.Combine("salesTotalDir", "SalesSummary.txt"),
+        salesDetailsBuilder.ToString());
+}
+
+record SalesTotal(double? Total, double? OverallTotal);
+```
